@@ -6,7 +6,8 @@ from config import TOKEN
 def start(update: Update, context):
     reply = [
         ['🔢 Find my number 🔍', '🤖 Find number of robot 🎲'],
-        ['📊 View Results 📜', '🗑️ Clear History 🔄']
+        ['📊 View Results 📜', '🗑️ Clear History 🔄'],
+        ['Change range of numbers']
     ]
     key = ReplyKeyboardMarkup(reply, resize_keyboard=True)
 

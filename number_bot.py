@@ -2,20 +2,18 @@ from telegram.ext import Updater, MessageHandler, Filters, CommandHandler
 from telegram import Update, ReplyKeyboardMarkup
 from tinydb import TinyDB, Query
 from config import TOKEN
+
 import random
 bot=TinyDB('result.json')
 a = 1
 b = 10
 count = 0
 son = random.randint(a, b)
-
-def find_bot(update: Update, context):
-    update.message.reply_text(f"🤖 Welcome! Please find my number 🔢🎯⬇️ from {a} to {b}")
-
 def bot_find(update, context):
     global a, b, count, son
- 
+   
     text = update.message.text
+   
     text = int(text)
 
     if son < text:
@@ -33,3 +31,7 @@ def bot_find(update, context):
 
     else:
         update.message.reply_text("⚠️ Something went wrong! Please start again by sending /start. 🔄")
+
+def find_bot(update: Update, context):
+    update.message.reply_text(f"🤖 Welcome! Please find my number 🔢🎯⬇️ from {a} to {b}")
+

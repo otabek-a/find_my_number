@@ -2,8 +2,10 @@ from telegram.ext import Updater, MessageHandler, Filters, CommandHandler
 from telegram import Update, ReplyKeyboardMarkup
 from tinydb import TinyDB, Query
 from config import TOKEN
+
 import random
 bot=TinyDB('result.json')
+
 a=1
 b=10
 count=0
